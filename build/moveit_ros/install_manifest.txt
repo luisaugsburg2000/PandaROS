@@ -1,0 +1,15 @@
+/home/luis-a/panda_ws/install/moveit_ros/share/ament_index/resource_index/package_run_dependencies/moveit_ros
+/home/luis-a/panda_ws/install/moveit_ros/share/ament_index/resource_index/parent_prefix_path/moveit_ros
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/environment/ament_prefix_path.sh
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/environment/ament_prefix_path.dsv
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/environment/path.sh
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/environment/path.dsv
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/local_setup.bash
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/local_setup.sh
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/local_setup.zsh
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/local_setup.dsv
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/package.dsv
+/home/luis-a/panda_ws/install/moveit_ros/share/ament_index/resource_index/packages/moveit_ros
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/cmake/moveit_rosConfig.cmake
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/cmake/moveit_rosConfig-version.cmake
+/home/luis-a/panda_ws/install/moveit_ros/share/moveit_ros/package.xml

@@ -1,0 +1,8 @@
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:37:47:[m[K [01;31m[Kerror: [m[K‘[01m[KmoveGroupInterface[m[K’ was not declared in this scope; did you mean ‘[01m[KMoveGroupInterface[m[K’?
+   37 |   const std::vector<std::string> jointNames = [01;31m[KmoveGroupInterface[m[K.getJointNames();
+      |                                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                               [32m[KMoveGroupInterface[m[K
+gmake[2]: *** [CMakeFiles/move_program.dir/build.make:76: CMakeFiles/move_program.dir/src/move_program.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/move_program.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

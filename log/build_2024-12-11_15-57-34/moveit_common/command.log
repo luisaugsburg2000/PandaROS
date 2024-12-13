@@ -1,0 +1,6 @@
+Invoking command in '/home/luis-a/panda_ws/build/moveit_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_common -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_common
+Invoked command in '/home/luis-a/panda_ws/build/moveit_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_common -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_common
+Invoking command in '/home/luis-a/panda_ws/build/moveit_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_common -- -j32 -l32
+Invoked command in '/home/luis-a/panda_ws/build/moveit_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_common -- -j32 -l32
+Invoking command in '/home/luis-a/panda_ws/build/moveit_common': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_common
+Invoked command in '/home/luis-a/panda_ws/build/moveit_common' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_common

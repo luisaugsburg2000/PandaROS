@@ -1,0 +1,117 @@
+[0.013s] Invoking command in '/home/luis-a/panda_ws/build/moveit_ros_benchmarks': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_ros/benchmarks -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_ros_benchmarks
+[0.045s] -- The C compiler identification is GNU 11.4.0
+[0.076s] -- The CXX compiler identification is GNU 11.4.0
+[0.080s] -- Detecting C compiler ABI info
+[0.121s] -- Detecting C compiler ABI info - done
+[0.124s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.124s] -- Detecting C compile features
+[0.125s] -- Detecting C compile features - done
+[0.126s] -- Detecting CXX compiler ABI info
+[0.172s] -- Detecting CXX compiler ABI info - done
+[0.175s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.176s] -- Detecting CXX compile features
+[0.176s] -- Detecting CXX compile features - done
+[0.177s] -- Found moveit_common: 2.5.6 (/home/luis-a/panda_ws/install/moveit_common/share/moveit_common/cmake)
+[0.178s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.257s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.340s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.368s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.371s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.376s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.383s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.393s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.420s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.422s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.478s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.493s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.517s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.523s] -- Looking for pthread.h
+[0.569s] -- Looking for pthread.h - found
+[0.569s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.613s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.613s] -- Found Threads: TRUE  
+[0.641s] -- Found tf2_eigen: 0.25.8 (/opt/ros/humble/share/tf2_eigen/cmake)
+[0.710s] -- Found moveit_core: 2.5.6 (/home/luis-a/panda_ws/install/moveit_core/share/moveit_core/cmake)
+[0.733s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.756s] -- Found parameter_traits: 0.3.9 (/opt/ros/humble/share/parameter_traits/cmake)
+[0.763s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.765s] -- Found rclcpp_lifecycle: 16.0.10 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.779s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[0.833s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.869s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.945s] -- Found moveit_ros_planning: 2.5.6 (/home/luis-a/panda_ws/install/moveit_ros_planning/share/moveit_ros_planning/cmake)
+[0.948s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[0.960s] -- Found moveit_ros_warehouse: 2.5.6 (/home/luis-a/panda_ws/install/moveit_ros_warehouse/share/moveit_ros_warehouse/cmake)
+[0.962s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[0.973s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem 
+[0.982s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.991s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.992s] -- Configured cppcheck include dirs: /home/luis-a/panda_ws/src/moveit2/moveit_ros/benchmarks/include
+[0.992s] -- Configured cppcheck exclude dirs and/or files: 
+[0.992s] -- Added test 'lint_cmake' to check CMake code style
+[0.992s] -- Added test 'xmllint' to check XML markup files
+[0.993s] -- Configuring done
+[1.028s] -- Generating done
+[1.029s] -- Build files have been written to: /home/luis-a/panda_ws/build/moveit_ros_benchmarks
+[1.039s] Invoked command in '/home/luis-a/panda_ws/build/moveit_ros_benchmarks' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_ros/benchmarks -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_ros_benchmarks
+[1.040s] Invoking command in '/home/luis-a/panda_ws/build/moveit_ros_benchmarks': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_ros_benchmarks -- -j32 -l32
+[1.074s] [ 14%] [32mBuilding CXX object CMakeFiles/moveit_ros_benchmarks.dir/src/BenchmarkExecutor.cpp.o[0m
+[1.075s] [ 28%] [32mBuilding CXX object CMakeFiles/moveit_ros_benchmarks.dir/src/BenchmarkOptions.cpp.o[0m
+[14.596s] [ 42%] [32m[1mLinking CXX shared library libmoveit_ros_benchmarks.so[0m
+[14.751s] [ 42%] Built target moveit_ros_benchmarks
+[14.763s] [ 57%] [32mBuilding CXX object CMakeFiles/moveit_run_benchmark.dir/src/RunBenchmark.cpp.o[0m
+[14.764s] [ 71%] [32mBuilding CXX object CMakeFiles/moveit_combine_predefined_poses_benchmark.dir/src/simple_benchmarks/CombinePredefinedPosesBenchmark.cpp.o[0m
+[20.331s] [ 85%] [32m[1mLinking CXX executable moveit_run_benchmark[0m
+[20.467s] [ 85%] Built target moveit_run_benchmark
+[20.690s] [100%] [32m[1mLinking CXX executable moveit_combine_predefined_poses_benchmark[0m
+[20.851s] [100%] Built target moveit_combine_predefined_poses_benchmark
+[20.859s] Invoked command in '/home/luis-a/panda_ws/build/moveit_ros_benchmarks' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_ros_benchmarks -- -j32 -l32
+[20.877s] Invoking command in '/home/luis-a/panda_ws/build/moveit_ros_benchmarks': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_ros_benchmarks
+[20.881s] -- Install configuration: "Release"
+[20.881s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/libmoveit_ros_benchmarks.so.2.5.6
+[20.882s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/libmoveit_ros_benchmarks.so.2.5.6" to ""
+[20.882s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/libmoveit_ros_benchmarks.so
+[20.882s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/environment/library_path.sh
+[20.882s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/environment/library_path.dsv
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/moveit_ros_benchmarks/moveit_run_benchmark
+[20.883s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/moveit_ros_benchmarks/moveit_run_benchmark" to ""
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/moveit_ros_benchmarks/moveit_combine_predefined_poses_benchmark
+[20.883s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/moveit_ros_benchmarks/moveit_combine_predefined_poses_benchmark" to ""
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/include
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/include/moveit
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/include/moveit/benchmarks
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/include/moveit/benchmarks/BenchmarkExecutor.h
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/include/moveit/benchmarks/BenchmarkOptions.h
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/lib/moveit_ros_benchmarks/moveit_benchmark_statistics.py
+[20.883s] -- Up-to-date: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks
+[20.883s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_panda_all_planners.launch
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_panda.launch.py
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_panda_predefined_poses.launch.py
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_fanuc.launch
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_panda_all_planners_obstacles.launch
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_panda_all_planners.yaml
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo1.yaml
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_panda_predefined_poses.yaml
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo2.yaml
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/demo_obstacles.yaml
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/ament_index/resource_index/package_run_dependencies/moveit_ros_benchmarks
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/ament_index/resource_index/parent_prefix_path/moveit_ros_benchmarks
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/environment/ament_prefix_path.sh
+[20.884s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/environment/ament_prefix_path.dsv
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/environment/path.sh
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/environment/path.dsv
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/local_setup.bash
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/local_setup.sh
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/local_setup.zsh
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/local_setup.dsv
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/package.dsv
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/ament_index/resource_index/packages/moveit_ros_benchmarks
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/export_moveit_ros_benchmarksExport.cmake
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/export_moveit_ros_benchmarksExport-release.cmake
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/ConfigExtras.cmake
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/ament_cmake_export_targets-extras.cmake
+[20.885s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/ament_cmake_export_dependencies-extras.cmake
+[20.886s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig.cmake
+[20.886s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig-version.cmake
+[20.886s] -- Installing: /home/luis-a/panda_ws/install/moveit_ros_benchmarks/share/moveit_ros_benchmarks/package.xml
+[20.887s] Invoked command in '/home/luis-a/panda_ws/build/moveit_ros_benchmarks' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_ros_benchmarks

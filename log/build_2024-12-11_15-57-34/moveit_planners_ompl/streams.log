@@ -1,0 +1,170 @@
+[0.012s] Invoking command in '/home/luis-a/panda_ws/build/moveit_planners_ompl': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_planners/ompl -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_planners_ompl
+[0.042s] -- The C compiler identification is GNU 11.4.0
+[0.074s] -- The CXX compiler identification is GNU 11.4.0
+[0.078s] -- Detecting C compiler ABI info
+[0.119s] -- Detecting C compiler ABI info - done
+[0.122s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.122s] -- Detecting C compile features
+[0.123s] -- Detecting C compile features - done
+[0.124s] -- Detecting CXX compiler ABI info
+[0.173s] -- Detecting CXX compiler ABI info - done
+[0.177s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.177s] -- Detecting CXX compile features
+[0.177s] -- Detecting CXX compile features - done
+[0.178s] -- Found moveit_common: 2.5.6 (/home/luis-a/panda_ws/install/moveit_common/share/moveit_common/cmake)
+[0.180s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.259s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.444s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time thread serialization 
+[0.445s] -- Found moveit_core: 2.5.6 (/home/luis-a/panda_ws/install/moveit_core/share/moveit_core/cmake)
+[0.455s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.489s] -- Found parameter_traits: 0.3.9 (/opt/ros/humble/share/parameter_traits/cmake)
+[0.515s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.519s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.524s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.532s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.542s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.570s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.573s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.630s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.644s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.668s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.675s] -- Found Threads: TRUE  
+[0.707s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.709s] -- Found rclcpp_lifecycle: 16.0.10 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.724s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[0.789s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.827s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.963s] -- Found moveit_ros_planning: 2.5.6 (/home/luis-a/panda_ws/install/moveit_ros_planning/share/moveit_ros_planning/cmake)
+[0.966s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[0.981s] -- Found ompl: /opt/ros/humble/include/ompl-1.6;/usr/include;/usr/include/eigen3  
+[1.125s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[1.176s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[1.176s] -- Found OpenMP: TRUE (found version "4.5")  
+[1.184s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.186s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.207s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.232s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.232s] -- Configured cppcheck include dirs: /home/luis-a/panda_ws/src/moveit2/moveit_planners/ompl/ompl_interface/include
+[1.232s] -- Configured cppcheck exclude dirs and/or files: 
+[1.233s] -- Added test 'lint_cmake' to check CMake code style
+[1.234s] -- Added test 'xmllint' to check XML markup files
+[1.235s] -- Configuring done
+[1.360s] -- Generating done
+[1.361s] -- Build files have been written to: /home/luis-a/panda_ws/build/moveit_planners_ompl
+[1.379s] Invoked command in '/home/luis-a/panda_ws/build/moveit_planners_ompl' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_planners/ompl -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_planners_ompl
+[1.381s] Invoking command in '/home/luis-a/panda_ws/build/moveit_planners_ompl': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_planners_ompl -- -j32 -l32
+[1.434s] [  2%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.434s] [  4%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/ompl_interface.cpp.o[0m
+[1.434s] [ 12%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/planning_context_manager.cpp.o[0m
+[1.434s] [ 12%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/model_based_state_space.cpp.o[0m
+[1.434s] [ 12%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/constrained_planning_state_space.cpp.o[0m
+[1.435s] [ 14%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.438s] [ 17%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/model_based_state_space_factory.cpp.o[0m
+[1.438s] [ 19%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/model_based_planning_context.cpp.o[0m
+[1.439s] [ 21%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/constrained_planning_state_space_factory.cpp.o[0m
+[1.439s] [ 24%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/work_space/pose_model_state_space.cpp.o[0m
+[1.439s] [ 26%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/work_space/pose_model_state_space_factory.cpp.o[0m
+[1.440s] [ 29%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/joint_model_state_space_factory.cpp.o[0m
+[1.443s] [ 31%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/parameterization/joint_space/joint_model_state_space.cpp.o[0m
+[1.443s] [ 34%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/ompl_constraints.cpp.o[0m
+[1.472s] [ 39%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/threadsafe_state_storage.cpp.o[0m
+[1.472s] [ 39%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/projection_evaluators.cpp.o[0m
+[1.473s] [ 41%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/goal_union.cpp.o[0m
+[1.474s] [ 43%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constraints_library.cpp.o[0m
+[1.475s] [ 46%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/state_validity_checker.cpp.o[0m
+[1.484s] [ 48%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_sampler.cpp.o[0m
+[1.488s] [ 51%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_valid_state_sampler.cpp.o[0m
+[1.488s] [ 53%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_interface.dir/src/detail/constrained_goal_sampler.cpp.o[0m
+[2.705s] [ 56%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.794s] [ 56%] Built target gtest_main
+[8.849s] [ 58%] [32m[1mLinking CXX static library libgtest.a[0m
+[8.953s] [ 58%] Built target gtest
+[18.719s] [ 60%] [32m[1mLinking CXX shared library libmoveit_ompl_interface.so[0m
+[18.984s] [ 60%] Built target moveit_ompl_interface
+[19.001s] [ 68%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_ompl_planner_plugin.dir/src/ompl_planner_manager.cpp.o[0m
+[19.001s] [ 68%] [32mBuilding CXX object ompl_interface/CMakeFiles/test_threadsafe_state_storage.dir/test/test_threadsafe_state_storage.cpp.o[0m
+[19.001s] [ 68%] [32mBuilding CXX object ompl_interface/CMakeFiles/test_state_validity_checker.dir/test/test_state_validity_checker.cpp.o[0m
+[19.001s] [ 70%] [32mBuilding CXX object ompl_interface/CMakeFiles/test_constrained_state_validity_checker.dir/test/test_constrained_state_validity_checker.cpp.o[0m
+[19.001s] [ 75%] [32mBuilding CXX object ompl_interface/CMakeFiles/moveit_generate_state_database.dir/scripts/generate_state_database.cpp.o[0m
+[19.001s] [ 75%] [32mBuilding CXX object ompl_interface/CMakeFiles/test_state_space.dir/test/test_state_space.cpp.o[0m
+[19.002s] [ 78%] [32mBuilding CXX object ompl_interface/CMakeFiles/test_constrained_planning_state_space.dir/test/test_constrained_planning_state_space.cpp.o[0m
+[19.003s] [ 80%] [32mBuilding CXX object ompl_interface/CMakeFiles/test_planning_context_manager.dir/test/test_planning_context_manager.cpp.o[0m
+[22.681s] [ 82%] [32m[1mLinking CXX executable test_threadsafe_state_storage[0m
+[22.902s] [ 82%] Built target test_threadsafe_state_storage
+[24.842s] [ 85%] [32m[1mLinking CXX executable test_state_space[0m
+[25.112s] [ 85%] Built target test_state_space
+[25.269s] [ 87%] [32m[1mLinking CXX executable test_constrained_planning_state_space[0m
+[25.486s] [ 90%] [32m[1mLinking CXX shared library libmoveit_ompl_planner_plugin.so[0m
+[25.563s] [ 90%] Built target test_constrained_planning_state_space
+[25.682s] [ 90%] Built target moveit_ompl_planner_plugin
+[26.419s] [ 92%] [32m[1mLinking CXX executable test_state_validity_checker[0m
+[26.654s] [ 95%] [32m[1mLinking CXX executable test_constrained_state_validity_checker[0m
+[26.681s] [ 95%] Built target test_state_validity_checker
+[26.910s] [ 95%] Built target test_constrained_state_validity_checker
+[26.913s] [ 97%] [32m[1mLinking CXX executable generate_state_database[0m
+[27.112s] [ 97%] Built target moveit_generate_state_database
+[27.190s] [100%] [32m[1mLinking CXX executable test_planning_context_manager[0m
+[27.405s] [100%] Built target test_planning_context_manager
+[27.413s] Invoked command in '/home/luis-a/panda_ws/build/moveit_planners_ompl' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_planners_ompl -- -j32 -l32
+[27.431s] Invoking command in '/home/luis-a/panda_ws/build/moveit_planners_ompl': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_planners_ompl
+[27.435s] -- Install configuration: "Release"
+[27.435s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/lib/moveit_planners_ompl/generate_state_database
+[27.436s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_planners_ompl/lib/moveit_planners_ompl/generate_state_database" to ""
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/ompl_interface.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/planning_context_manager.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/model_based_planning_context.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/joint_space
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/joint_space/constrained_planning_state_space.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/joint_space/joint_model_state_space.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/joint_space/constrained_planning_state_space_factory.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/joint_space/joint_model_state_space_factory.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/model_based_state_space.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/model_based_state_space_factory.h
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/work_space
+[27.436s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/work_space/pose_model_state_space.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/parameterization/work_space/pose_model_state_space_factory.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/constrained_goal_sampler.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/ompl_constraints.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/constraints_library.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/constraint_approximations.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/state_validity_checker.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/goal_union.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/constrained_sampler.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/threadsafe_state_storage.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/projection_evaluators.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/include/moveit/ompl_interface/detail/constrained_valid_state_sampler.h
+[27.437s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/lib/libmoveit_ompl_interface.so.2.5.6
+[27.439s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_planners_ompl/lib/libmoveit_ompl_interface.so.2.5.6" to ""
+[27.439s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/lib/libmoveit_ompl_interface.so
+[27.439s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/lib/libmoveit_ompl_planner_plugin.so.2.5.6
+[27.439s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_planners_ompl/lib/libmoveit_ompl_planner_plugin.so.2.5.6" to ""
+[27.439s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/lib/libmoveit_ompl_planner_plugin.so
+[27.439s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/environment/library_path.sh
+[27.439s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/environment/library_path.dsv
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/ompl_interface_plugin_description.xml
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/ament_index/resource_index/package_run_dependencies/moveit_planners_ompl
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/ament_index/resource_index/parent_prefix_path/moveit_planners_ompl
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/environment/ament_prefix_path.sh
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/environment/ament_prefix_path.dsv
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/environment/path.sh
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/environment/path.dsv
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/local_setup.bash
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/local_setup.sh
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/local_setup.zsh
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/local_setup.dsv
+[27.440s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/package.dsv
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/ament_index/resource_index/packages/moveit_planners_ompl
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/ament_index/resource_index/moveit_core__pluginlib__plugin/moveit_planners_ompl
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/cmake/export_moveit_planners_omplExport.cmake
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/cmake/export_moveit_planners_omplExport-release.cmake
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/cmake/ament_cmake_export_targets-extras.cmake
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/cmake/moveit_planners_omplConfig.cmake
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/cmake/moveit_planners_omplConfig-version.cmake
+[27.441s] -- Installing: /home/luis-a/panda_ws/install/moveit_planners_ompl/share/moveit_planners_ompl/package.xml
+[27.443s] Invoked command in '/home/luis-a/panda_ws/build/moveit_planners_ompl' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_planners_ompl

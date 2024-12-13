@@ -1,0 +1,15 @@
+/home/luis-a/panda_ws/install/moveit/share/ament_index/resource_index/package_run_dependencies/moveit
+/home/luis-a/panda_ws/install/moveit/share/ament_index/resource_index/parent_prefix_path/moveit
+/home/luis-a/panda_ws/install/moveit/share/moveit/environment/ament_prefix_path.sh
+/home/luis-a/panda_ws/install/moveit/share/moveit/environment/ament_prefix_path.dsv
+/home/luis-a/panda_ws/install/moveit/share/moveit/environment/path.sh
+/home/luis-a/panda_ws/install/moveit/share/moveit/environment/path.dsv
+/home/luis-a/panda_ws/install/moveit/share/moveit/local_setup.bash
+/home/luis-a/panda_ws/install/moveit/share/moveit/local_setup.sh
+/home/luis-a/panda_ws/install/moveit/share/moveit/local_setup.zsh
+/home/luis-a/panda_ws/install/moveit/share/moveit/local_setup.dsv
+/home/luis-a/panda_ws/install/moveit/share/moveit/package.dsv
+/home/luis-a/panda_ws/install/moveit/share/ament_index/resource_index/packages/moveit
+/home/luis-a/panda_ws/install/moveit/share/moveit/cmake/moveitConfig.cmake
+/home/luis-a/panda_ws/install/moveit/share/moveit/cmake/moveitConfig-version.cmake
+/home/luis-a/panda_ws/install/moveit/share/moveit/package.xml

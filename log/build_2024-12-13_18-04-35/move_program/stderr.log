@@ -1,0 +1,35 @@
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:8:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble time[m[K’ redeclared as different kind of entity
+    8 | double [01;31m[Ktime[m[K = 0.0;
+      |        [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/include/pthread.h:23[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:35[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:148[m[K,
+                 from [01m[K/usr/include/c++/11/ext/atomicity.h:35[m[K,
+                 from [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:61[m[K,
+                 from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+                 from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:1[m[K:
+[01m[K/usr/include/time.h:76:15:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Ktime_t time(time_t*)[m[K’
+   76 | extern time_t [01;36m[Ktime[m[K (time_t *__timer) __THROW;
+      |               [01;36m[K^~~~[m[K
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:[m[K In function ‘[01m[Kvoid jointCallback()[m[K’:
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:16:65:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kdouble[m[K’ and ‘[01m[Ktime_t(time_t*) noexcept[m[K’ {aka ‘[01m[Klong int(long int*) noexcept[m[K’} to binary ‘[01m[Koperator*[m[K’
+   16 | ble target_position = amplitude * sin([32m[K2 * M_PI * frequency[m[K [01;31m[K*[m[K [34m[Ktime[m[K);
+      |                                       [32m[K~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~[m[K
+      |                                                [32m[K|[m[K             [34m[K|[m[K
+      |                                                [32m[Kdouble[m[K        [34m[Ktime_t(time_t*) noexcept {aka long int(long int*) noexcept}[m[K
+
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:17:88:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kdouble[m[K’ and ‘[01m[Ktime_t(time_t*) noexcept[m[K’ {aka ‘[01m[Klong int(long int*) noexcept[m[K’} to binary ‘[01m[Koperator*[m[K’
+   17 | mplitude * 2 * M_PI * frequency * cos([32m[K2 * M_PI * frequency[m[K [01;31m[K*[m[K [34m[Ktime[m[K);
+      |                                       [32m[K~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~[m[K
+      |                                                [32m[K|[m[K             [34m[K|[m[K
+      |                                                [32m[Kdouble[m[K        [34m[Ktime_t(time_t*) noexcept {aka long int(long int*) noexcept}[m[K
+
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:30:8:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Ktime_t(time_t*) noexcept[m[K’ {aka ‘[01m[Klong int(long int*) noexcept[m[K’} and ‘[01m[Kdouble[m[K’ to binary ‘[01m[Koperator+[m[K’
+   30 |   [01;31m[Ktime += step / 1000.0[m[K;
+      |   [01;31m[K~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:30:8:[m[K [01;36m[Knote: [m[K  in evaluation of ‘[01m[Koperator+=(time_t(time_t*) noexcept {aka long int(long int*) noexcept}, double)[m[K’
+gmake[2]: *** [CMakeFiles/move_program.dir/build.make:76: CMakeFiles/move_program.dir/src/move_program.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/move_program.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,183 @@
+[0.021s] Invoking command in '/home/luis-a/panda_ws/build/moveit_servo': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_ros/moveit_servo -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_servo
+[0.053s] -- The C compiler identification is GNU 11.4.0
+[0.084s] -- The CXX compiler identification is GNU 11.4.0
+[0.088s] -- Detecting C compiler ABI info
+[0.133s] -- Detecting C compiler ABI info - done
+[0.136s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.137s] -- Detecting C compile features
+[0.137s] -- Detecting C compile features - done
+[0.138s] -- Detecting CXX compiler ABI info
+[0.187s] -- Detecting CXX compiler ABI info - done
+[0.191s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.191s] -- Detecting CXX compile features
+[0.191s] -- Detecting CXX compile features - done
+[0.193s] -- Found moveit_common: 2.5.6 (/home/luis-a/panda_ws/install/moveit_common/share/moveit_common/cmake)
+[0.195s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.275s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.367s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.372s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.374s] -- Found control_msgs: 4.6.0 (/opt/ros/humble/share/control_msgs/cmake)
+[0.403s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.408s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.414s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.422s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.434s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.505s] -- Found control_toolbox: 3.3.0 (/opt/ros/humble/share/control_toolbox/cmake)
+[0.538s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.540s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.601s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.618s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.645s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.652s] -- Looking for pthread.h
+[0.695s] -- Looking for pthread.h - found
+[0.695s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.741s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.741s] -- Found Threads: TRUE  
+[0.781s] -- Found parameter_traits: 0.3.9 (/opt/ros/humble/share/parameter_traits/cmake)
+[0.792s] -- Found rclcpp_lifecycle: 16.0.10 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.824s] -- Found moveit_core: 2.5.6 (/home/luis-a/panda_ws/install/moveit_core/share/moveit_core/cmake)
+[0.853s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.878s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[0.940s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.969s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.072s] -- Found moveit_ros_planning: 2.5.6 (/home/luis-a/panda_ws/install/moveit_ros_planning/share/moveit_ros_planning/cmake)
+[1.075s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.090s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[1.142s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.144s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.146s] -- Found ros_testing: 0.4.0 (/opt/ros/humble/share/ros_testing/cmake)
+[1.148s] -- Found launch_testing_ament_cmake: 1.0.6 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+[1.150s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.162s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.165s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.165s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.165s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.165s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.177s] -- Found PythonExtra: .so  
+[1.179s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[1.225s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.252s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.253s] -- Configured cppcheck include dirs: /home/luis-a/panda_ws/src/moveit2/moveit_ros/moveit_servo/include
+[1.253s] -- Configured cppcheck exclude dirs and/or files: 
+[1.254s] -- Added test 'lint_cmake' to check CMake code style
+[1.254s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.255s] -- Added test 'xmllint' to check XML markup files
+[1.256s] -- Configuring done
+[1.357s] -- Generating done
+[1.359s] -- Build files have been written to: /home/luis-a/panda_ws/build/moveit_servo
+[1.373s] Invoked command in '/home/luis-a/panda_ws/build/moveit_servo' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_ros/moveit_servo -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/moveit_servo
+[1.374s] Invoking command in '/home/luis-a/panda_ws/build/moveit_servo': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_servo -- -j32 -l32
+[1.411s] [  3%] [32mBuilding CXX object CMakeFiles/fake_command_publisher.dir/test/publish_fake_jog_commands.cpp.o[0m
+[1.411s] [ 12%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib_parameters.dir/src/servo_parameters.cpp.o[0m
+[1.411s] [ 12%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.411s] [ 12%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.412s] [ 15%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib_parameters.dir/src/parameter_descriptor_builder.cpp.o[0m
+[1.412s] [ 18%] [32mBuilding CXX object CMakeFiles/servo_controller_input.dir/src/teleop_demo/joystick_servo_example.cpp.o[0m
+[1.975s] [ 21%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.014s] [ 21%] Built target gtest_main
+[5.051s] [ 24%] [32m[1mLinking CXX executable fake_command_publisher[0m
+[5.175s] [ 24%] Built target fake_command_publisher
+[7.033s] [ 27%] [32m[1mLinking CXX static library libgtest.a[0m
+[7.067s] [ 27%] Built target gtest
+[9.060s] [ 30%] [32m[1mLinking CXX shared library libmoveit_servo_lib_parameters.so[0m
+[9.209s] [ 30%] Built target moveit_servo_lib_parameters
+[9.232s] [ 42%] [32mBuilding CXX object CMakeFiles/test_servo_integration.dir/test/test_servo_interface.cpp.o[0m
+[9.232s] [ 42%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/utilities.cpp.o[0m
+[9.232s] [ 42%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/servo.cpp.o[0m
+[9.232s] [ 42%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/servo_calcs.cpp.o[0m
+[9.232s] [ 51%] [32mBuilding CXX object CMakeFiles/test_servo_collision.dir/test/test_servo_collision.cpp.o[0m
+[9.232s] [ 51%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/enforce_limits.cpp.o[0m
+[9.232s] [ 51%] [32mBuilding CXX object CMakeFiles/moveit_servo_lib.dir/src/collision_check.cpp.o[0m
+[10.593s] [ 54%] [32m[1mLinking CXX shared library libservo_controller_input.so[0m
+[10.935s] [ 54%] Built target servo_controller_input
+[28.145s] [ 57%] [32m[1mLinking CXX executable test_servo_collision[0m
+[28.398s] [ 57%] Built target test_servo_collision
+[30.002s] [ 60%] [32m[1mLinking CXX executable test_servo_integration[0m
+[30.422s] [ 60%] Built target test_servo_integration
+[41.701s] [ 63%] [32m[1mLinking CXX shared library libmoveit_servo_lib.so[0m
+[41.964s] [ 63%] Built target moveit_servo_lib
+[41.985s] [ 66%] [32mBuilding CXX object CMakeFiles/servo_node.dir/src/servo_node.cpp.o[0m
+[41.986s] [ 69%] [32mBuilding CXX object CMakeFiles/pose_tracking.dir/src/pose_tracking.cpp.o[0m
+[41.987s] [ 72%] [32mBuilding CXX object CMakeFiles/servo_calcs_unit_tests.dir/test/servo_calcs_unit_tests.cpp.o[0m
+[50.299s] [ 75%] [32m[1mLinking CXX shared library libservo_node.so[0m
+[50.696s] [ 75%] Built target servo_node
+[50.751s] [ 78%] [32mBuilding CXX object CMakeFiles/servo_node_main.dir/src/servo_node_main.cpp.o[0m
+[59.143s] [ 81%] [32m[1mLinking CXX shared library libpose_tracking.so[0m
+[59.315s] [ 81%] Built target pose_tracking
+[59.338s] [ 87%] [32mBuilding CXX object CMakeFiles/servo_pose_tracking_demo.dir/src/cpp_interface_demo/pose_tracking_demo.cpp.o[0m
+[59.338s] [ 87%] [32mBuilding CXX object CMakeFiles/test_servo_pose_tracking.dir/test/pose_tracking_test.cpp.o[0m
+[60.537s] [ 90%] [32m[1mLinking CXX executable servo_node_main[0m
+[60.709s] [ 90%] Built target servo_node_main
+[62.573s] [ 93%] [32m[1mLinking CXX executable servo_calcs_unit_tests[0m
+[62.778s] [ 93%] Built target servo_calcs_unit_tests
+[70.242s] [ 96%] [32m[1mLinking CXX executable servo_pose_tracking_demo[0m
+[70.686s] [ 96%] Built target servo_pose_tracking_demo
+[72.710s] [100%] [32m[1mLinking CXX executable test_servo_pose_tracking[0m
+[72.982s] [100%] Built target test_servo_pose_tracking
+[72.993s] Invoked command in '/home/luis-a/panda_ws/build/moveit_servo' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/moveit_servo -- -j32 -l32
+[73.036s] Invoking command in '/home/luis-a/panda_ws/build/moveit_servo': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_servo
+[73.042s] -- Install configuration: "Release"
+[73.042s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libmoveit_servo_lib.so.2.5.6
+[73.045s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/libmoveit_servo_lib.so.2.5.6" to ""
+[73.045s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libmoveit_servo_lib.so
+[73.045s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so.2.5.6
+[73.045s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so.2.5.6" to ""
+[73.045s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libmoveit_servo_lib_parameters.so
+[73.045s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libpose_tracking.so
+[73.046s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/libpose_tracking.so" to ""
+[73.046s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libservo_node.so
+[73.046s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/libservo_node.so" to ""
+[73.046s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/libservo_controller_input.so
+[73.048s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/libservo_controller_input.so" to ""
+[73.048s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/moveit_servo/servo_node_main
+[73.048s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/moveit_servo/servo_node_main" to ""
+[73.048s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/moveit_servo/servo_pose_tracking_demo
+[73.049s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/moveit_servo/servo_pose_tracking_demo" to ""
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/lib/moveit_servo/fake_command_publisher
+[73.049s] -- Set runtime path of "/home/luis-a/panda_ws/install/moveit_servo/lib/moveit_servo/fake_command_publisher" to ""
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/status_codes.h
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/pose_tracking.h
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/utilities.h
+[73.049s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/enforce_limits.hpp
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/servo_node.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/servo_parameters.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/servo_server.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/servo_calcs.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/parameter_descriptor_builder.hpp
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/servo.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/collision_check.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/include/moveit_servo/make_shared_from_pool.h
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/launch
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/launch/pose_tracking_example.launch.py
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/launch/servo_example.launch.py
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/config
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/config/panda_simulated_config.yaml
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/config/demo_rviz_config.rviz
+[73.050s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/config/demo_rviz_pose_tracking.rviz
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/config/pose_tracking_settings.yaml
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/config/panda_simulated_config_pose_tracking.yaml
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/environment/library_path.sh
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/environment/library_path.dsv
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/ament_index/resource_index/package_run_dependencies/moveit_servo
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/ament_index/resource_index/parent_prefix_path/moveit_servo
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/environment/ament_prefix_path.sh
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/environment/ament_prefix_path.dsv
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/environment/path.sh
+[73.051s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/environment/path.dsv
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/local_setup.bash
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/local_setup.sh
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/local_setup.zsh
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/local_setup.dsv
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/package.dsv
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/ament_index/resource_index/packages/moveit_servo
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/ament_index/resource_index/rclcpp_components/moveit_servo
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/cmake/export_moveit_servoExport.cmake
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/cmake/export_moveit_servoExport-release.cmake
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/cmake/ament_cmake_export_targets-extras.cmake
+[73.052s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/cmake/ament_cmake_export_dependencies-extras.cmake
+[73.053s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/cmake/moveit_servoConfig.cmake
+[73.053s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/cmake/moveit_servoConfig-version.cmake
+[73.053s] -- Installing: /home/luis-a/panda_ws/install/moveit_servo/share/moveit_servo/package.xml
+[73.054s] Invoked command in '/home/luis-a/panda_ws/build/moveit_servo' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/moveit_servo

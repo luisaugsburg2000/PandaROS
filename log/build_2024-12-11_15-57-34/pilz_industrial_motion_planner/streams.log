@@ -1,0 +1,356 @@
+[0.027s] Invoking command in '/home/luis-a/panda_ws/build/pilz_industrial_motion_planner': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_planners/pilz_industrial_motion_planner -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/pilz_industrial_motion_planner
+[0.059s] -- The C compiler identification is GNU 11.4.0
+[0.090s] -- The CXX compiler identification is GNU 11.4.0
+[0.094s] -- Detecting C compiler ABI info
+[0.137s] -- Detecting C compiler ABI info - done
+[0.141s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.141s] -- Detecting C compile features
+[0.141s] -- Detecting C compile features - done
+[0.143s] -- Detecting CXX compiler ABI info
+[0.192s] -- Detecting CXX compiler ABI info - done
+[0.195s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.195s] -- Detecting CXX compile features
+[0.196s] -- Detecting CXX compile features - done
+[0.197s] -- Found moveit_common: 2.5.6 (/home/luis-a/panda_ws/install/moveit_common/share/moveit_common/cmake)
+[0.200s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.282s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.376s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.382s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.384s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.416s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.421s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.428s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.437s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.449s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.472s] -- Found moveit_core: 2.5.6 (/home/luis-a/panda_ws/install/moveit_core/share/moveit_core/cmake)
+[0.597s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.630s] -- Found parameter_traits: 0.3.9 (/opt/ros/humble/share/parameter_traits/cmake)
+[0.665s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.668s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.733s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.749s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.776s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.784s] -- Found Threads: TRUE  
+[0.817s] -- Found rclcpp_lifecycle: 16.0.10 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.833s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[0.900s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.942s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.098s] -- Found moveit_ros_move_group: 2.5.6 (/home/luis-a/panda_ws/install/moveit_ros_move_group/share/moveit_ros_move_group/cmake)
+[1.101s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[1.120s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.129s] -- Found moveit_ros_planning_interface: 2.5.6 (/home/luis-a/panda_ws/install/moveit_ros_planning_interface/share/moveit_ros_planning_interface/cmake)
+[1.132s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[1.139s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[1.155s] -- Found tf2_eigen_kdl: 0.25.8 (/opt/ros/humble/share/tf2_eigen_kdl/cmake)
+[1.159s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+[1.217s] -- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.220s] -- Found ament_cmake_gmock: 1.3.10 (/opt/ros/humble/share/ament_cmake_gmock/cmake)
+[1.222s] -- Found ros_testing: 0.4.0 (/opt/ros/humble/share/ros_testing/cmake)
+[1.224s] -- Found launch_testing_ament_cmake: 1.0.6 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+[1.226s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.238s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.242s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.242s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.242s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.242s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.254s] -- Found PythonExtra: .so  
+[1.255s] -- Found moveit_resources_prbt_support: 2.5.6 (/home/luis-a/panda_ws/install/moveit_resources_prbt_support/share/moveit_resources_prbt_support/cmake)
+[1.256s] -- Found moveit_resources_prbt_moveit_config: 2.5.6 (/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config/share/moveit_resources_prbt_moveit_config/cmake)
+[1.258s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread 
+[1.259s] -- Found pilz_industrial_motion_planner_testutils: 2.5.6 (/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/share/pilz_industrial_motion_planner_testutils/cmake)
+[1.272s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.294s] -- Found gmock sources under '/opt/ros/humble/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[1.298s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.334s] -- Found launch_testing_ament_cmake: 1.0.6 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)
+[1.334s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.348s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.348s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.348s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.356s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.356s] -- Configured cppcheck include dirs: /home/luis-a/panda_ws/src/moveit2/moveit_planners/pilz_industrial_motion_planner/include
+[1.356s] -- Configured cppcheck exclude dirs and/or files: 
+[1.357s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.359s] -- Added test 'xmllint' to check XML markup files
+[1.360s] -- Configuring done
+[1.648s] -- Generating done
+[1.651s] -- Build files have been written to: /home/luis-a/panda_ws/build/pilz_industrial_motion_planner
+[1.676s] Invoked command in '/home/luis-a/panda_ws/build/pilz_industrial_motion_planner' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/luis-a/panda_ws/src/moveit2/moveit_planners/pilz_industrial_motion_planner -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/luis-a/panda_ws/install/pilz_industrial_motion_planner
+[1.678s] Invoking command in '/home/luis-a/panda_ws/build/pilz_industrial_motion_planner': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/pilz_industrial_motion_planner -- -j32 -l32
+[1.723s] [  3%] [32mBuilding CXX object CMakeFiles/joint_limits_common.dir/src/limits_container.cpp.o[0m
+[1.723s] [  3%] [32mBuilding CXX object CMakeFiles/joint_limits_common.dir/src/joint_limits_validator.cpp.o[0m
+[1.723s] [  3%] [32mBuilding CXX object CMakeFiles/trajectory_generation_common.dir/src/trajectory_generator.cpp.o[0m
+[1.723s] [  8%] [32mBuilding CXX object CMakeFiles/trajectory_generation_common.dir/src/trajectory_functions.cpp.o[0m
+[1.723s] [  8%] [32mBuilding CXX object CMakeFiles/joint_limits_common.dir/src/joint_limits_container.cpp.o[0m
+[1.723s] [  8%] [32mBuilding CXX object CMakeFiles/trajectory_generation_common.dir/src/trajectory_blender_transition_window.cpp.o[0m
+[1.723s] [  9%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.724s] [  9%] [32mBuilding CXX object CMakeFiles/joint_limits_common.dir/src/joint_limits_aggregator.cpp.o[0m
+[1.724s] [ 12%] [32mBuilding CXX object CMakeFiles/joint_limits_common.dir/src/cartesian_limits_aggregator.cpp.o[0m
+[1.724s] [ 13%] [32mBuilding CXX object CMakeFiles/joint_limits_common.dir/src/cartesian_limit.cpp.o[0m
+[1.724s] [ 13%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.724s] [ 14%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[1.724s] [ 16%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[1.724s] [ 16%] [32mBuilding CXX object CMakeFiles/planning_context_loader_base.dir/src/planning_context_loader.cpp.o[0m
+[1.724s] [ 18%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/opt/ros/humble/src/gtest_vendor/src/gtest-all.cc.o[0m
+[2.336s] [ 19%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.368s] [ 19%] Built target gtest_main
+[2.677s] [ 20%] [32m[1mLinking CXX static library libgmock_main.a[0m
+[2.720s] [ 20%] Built target gmock_main
+[6.943s] [ 21%] [32m[1mLinking CXX static library libgtest.a[0m
+[6.964s] [ 22%] [32m[1mLinking CXX static library libgmock.a[0m
+[6.974s] [ 22%] Built target gtest
+[7.004s] [ 22%] Built target gmock
+[7.678s] [ 24%] [32m[1mLinking CXX shared library libplanning_context_loader_base.so[0m
+[8.625s] [ 25%] [32m[1mLinking CXX shared library libjoint_limits_common.so[0m
+[9.154s] [ 25%] Built target joint_limits_common
+[9.174s] [ 26%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_joint_limits_aggregator.dir/src/unittest_joint_limits_aggregator.cpp.o[0m
+[9.176s] [ 27%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_joint_limits_validator.dir/src/unittest_joint_limits_validator.cpp.o[0m
+[9.176s] [ 30%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_joint_limit.dir/src/unittest_joint_limit.cpp.o[0m
+[9.177s] [ 30%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_joint_limits_container.dir/src/unittest_joint_limits_container.cpp.o[0m
+[9.178s] [ 31%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_cartesian_limits_aggregator.dir/src/unittest_cartesian_limits_aggregator.cpp.o[0m
+[10.499s] [ 32%] [32m[1mLinking CXX executable unittest_joint_limits_container[0m
+[10.696s] [ 33%] [32m[1mLinking CXX executable unittest_joint_limits_validator[0m
+[10.703s] [ 33%] Built target unittest_joint_limits_container
+[10.838s] [ 33%] Built target unittest_joint_limits_validator
+[10.995s] [ 34%] [32m[1mLinking CXX shared library libtrajectory_generation_common.so[0m
+[11.135s] [ 34%] Built target trajectory_generation_common
+[11.153s] [ 36%] [32mBuilding CXX object test/CMakeFiles/pilz_industrial_motion_planner_test_utils.dir/test_utils.cpp.o[0m
+[11.160s] [ 37%] [32mBuilding CXX object CMakeFiles/command_list_manager.dir/src/command_list_manager.cpp.o[0m
+[11.161s] [ 38%] [32mBuilding CXX object CMakeFiles/command_list_manager.dir/src/plan_components_builder.cpp.o[0m
+[12.085s] [ 39%] [32m[1mLinking CXX executable unittest_cartesian_limits_aggregator[0m
+[12.290s] [ 39%] Built target unittest_cartesian_limits_aggregator
+[12.380s] [ 40%] [32m[1mLinking CXX executable unittest_joint_limit[0m
+[12.567s] [ 40%] Built target unittest_joint_limit
+[14.467s] [ 42%] [32m[1mLinking CXX executable unittest_joint_limits_aggregator[0m
+[14.515s] [ 42%] Built target planning_context_loader_base
+[14.534s] [ 44%] [32mBuilding CXX object CMakeFiles/planning_context_loader_ptp.dir/src/planning_context_loader_ptp.cpp.o[0m
+[14.534s] [ 45%] [32mBuilding CXX object CMakeFiles/pilz_industrial_motion_planner.dir/src/pilz_industrial_motion_planner.cpp.o[0m
+[14.534s] [ 45%] [32mBuilding CXX object CMakeFiles/planning_context_loader_ptp.dir/src/trajectory_generator_ptp.cpp.o[0m
+[14.534s] [ 46%] [32mBuilding CXX object CMakeFiles/planning_context_loader_ptp.dir/src/velocity_profile_atrap.cpp.o[0m
+[14.535s] [ 48%] [32mBuilding CXX object CMakeFiles/planning_context_loader_lin.dir/src/planning_context_loader_lin.cpp.o[0m
+[14.536s] [ 50%] [32mBuilding CXX object CMakeFiles/planning_context_loader_lin.dir/src/trajectory_generator_lin.cpp.o[0m
+[14.536s] [ 50%] [32mBuilding CXX object CMakeFiles/planning_context_loader_lin.dir/src/velocity_profile_atrap.cpp.o[0m
+[14.538s] [ 51%] [32mBuilding CXX object CMakeFiles/planning_context_loader_circ.dir/src/path_circle_generator.cpp.o[0m
+[14.538s] [ 53%] [32mBuilding CXX object CMakeFiles/planning_context_loader_circ.dir/src/planning_context_loader_circ.cpp.o[0m
+[14.539s] [ 54%] [32mBuilding CXX object CMakeFiles/planning_context_loader_circ.dir/src/trajectory_generator_circ.cpp.o[0m
+[14.713s] [ 54%] Built target unittest_joint_limits_aggregator
+[18.116s] [ 55%] [32m[1mLinking CXX shared library libcommand_list_manager.so[0m
+[18.238s] [ 55%] Built target command_list_manager
+[18.259s] [ 56%] [32mBuilding CXX object CMakeFiles/sequence_capability.dir/src/move_group_sequence_action.cpp.o[0m
+[18.259s] [ 57%] [32mBuilding CXX object CMakeFiles/sequence_capability.dir/src/move_group_sequence_service.cpp.o[0m
+[20.908s] [ 59%] [32m[1mLinking CXX shared library libplanning_context_loader_circ.so[0m
+[20.981s] [ 60%] [32m[1mLinking CXX shared library libplanning_context_loader_lin.so[0m
+[21.056s] [ 60%] Built target planning_context_loader_circ
+[21.072s] [ 61%] [32m[1mLinking CXX shared library libplanning_context_loader_ptp.so[0m
+[21.131s] [ 61%] Built target planning_context_loader_lin
+[21.192s] [ 62%] [32m[1mLinking CXX static library libpilz_industrial_motion_planner_test_utils.a[0m
+[21.211s] [ 62%] Built target planning_context_loader_ptp
+[21.220s] [ 62%] Built target pilz_industrial_motion_planner_test_utils
+[21.238s] [ 63%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_blender_transition_window.dir/src/unittest_trajectory_blender_transition_window.cpp.o[0m
+[21.238s] [ 65%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_generator_common.dir/src/unittest_trajectory_generator_common.cpp.o[0m
+[21.239s] [ 67%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_functions.dir/src/unittest_trajectory_functions.cpp.o[0m
+[21.239s] [ 67%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_blender_transition_window.dir/__/__/src/trajectory_blender_transition_window.cpp.o[0m
+[21.239s] [ 68%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_generator_lin.dir/src/unittest_trajectory_generator_lin.cpp.o[0m
+[21.239s] [ 71%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_generator_ptp.dir/src/unittest_trajectory_generator_ptp.cpp.o[0m
+[21.239s] [ 71%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_generator_circ.dir/src/unittest_trajectory_generator_circ.cpp.o[0m
+[22.961s] [ 72%] [32m[1mLinking CXX shared library libpilz_industrial_motion_planner.so[0m
+[23.101s] [ 72%] Built target pilz_industrial_motion_planner
+[23.125s] [ 78%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_generator.dir/__/__/src/trajectory_generator.cpp.o[0m
+[23.125s] [ 78%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_trajectory_generator.dir/src/unittest_trajectory_generator.cpp.o[0m
+[23.125s] [ 78%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_planning_context.dir/src/unittest_planning_context.cpp.o[0m
+[23.125s] [ 78%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_velocity_profile_atrap.dir/src/unittest_velocity_profile_atrap.cpp.o[0m
+[23.125s] [ 78%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_pilz_industrial_motion_planner_direct.dir/src/unittest_pilz_industrial_motion_planner_direct.cpp.o[0m
+[23.125s] [ 83%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_planning_context_loaders.dir/src/unittest_planning_context_loaders.cpp.o[0m
+[23.125s] [ 83%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_velocity_profile_atrap.dir/__/__/src/velocity_profile_atrap.cpp.o[0m
+[23.125s] [ 83%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_pilz_industrial_motion_planner.dir/src/unittest_pilz_industrial_motion_planner.cpp.o[0m
+[23.125s] [ 83%] [32mBuilding CXX object test/unit_tests/CMakeFiles/unittest_get_solver_tip_frame.dir/src/unittest_get_solver_tip_frame.cpp.o[0m
+[25.833s] [ 84%] [32m[1mLinking CXX executable unittest_velocity_profile_atrap[0m
+[28.744s] [ 84%] Built target unittest_velocity_profile_atrap
+[29.218s] [ 85%] [32m[1mLinking CXX shared library libsequence_capability.so[0m
+[29.290s] [ 86%] [32m[1mLinking CXX executable unittest_get_solver_tip_frame[0m
+[29.380s] [ 86%] Built target sequence_capability
+[30.599s] [ 87%] [32m[1mLinking CXX executable unittest_trajectory_blender_transition_window[0m
+[30.807s] [ 87%] Built target unittest_trajectory_blender_transition_window
+[30.851s] [ 89%] [32m[1mLinking CXX executable unittest_trajectory_functions[0m
+[31.057s] [ 89%] Built target unittest_trajectory_functions
+[31.115s] [ 89%] Built target unittest_get_solver_tip_frame
+[31.259s] [ 90%] [32m[1mLinking CXX executable unittest_trajectory_generator_lin[0m
+[31.464s] [ 90%] Built target unittest_trajectory_generator_lin
+[31.678s] [ 91%] [32m[1mLinking CXX executable unittest_trajectory_generator[0m
+[31.874s] [ 91%] Built target unittest_trajectory_generator
+[32.241s] [ 92%] [32m[1mLinking CXX executable unittest_trajectory_generator_ptp[0m
+[32.440s] [ 92%] Built target unittest_trajectory_generator_ptp
+[32.451s] [ 93%] [32m[1mLinking CXX executable unittest_trajectory_generator_circ[0m
+[32.520s] [ 95%] [32m[1mLinking CXX executable unittest_pilz_industrial_motion_planner_direct[0m
+[32.661s] [ 95%] Built target unittest_trajectory_generator_circ
+[32.694s] [ 95%] Built target unittest_pilz_industrial_motion_planner_direct
+[33.346s] [ 96%] [32m[1mLinking CXX executable unittest_planning_context[0m
+[33.549s] [ 96%] Built target unittest_planning_context
+[34.336s] [ 97%] [32m[1mLinking CXX executable unittest_pilz_industrial_motion_planner[0m
+[34.444s] [ 98%] [32m[1mLinking CXX executable unittest_planning_context_loaders[0m
+[34.507s] [ 98%] Built target unittest_pilz_industrial_motion_planner
+[34.608s] [100%] [32m[1mLinking CXX executable unittest_trajectory_generator_common[0m
+[34.632s] [100%] Built target unittest_planning_context_loaders
+[34.809s] [100%] Built target unittest_trajectory_generator_common
+[34.819s] Invoked command in '/home/luis-a/panda_ws/build/pilz_industrial_motion_planner' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/luis-a/panda_ws/build/pilz_industrial_motion_planner -- -j32 -l32
+[34.875s] Invoking command in '/home/luis-a/panda_ws/build/pilz_industrial_motion_planner': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/pilz_industrial_motion_planner
+[34.881s] -- Install configuration: "Release"
+[34.881s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/plugins/pilz_industrial_motion_planner_plugin_description.xml
+[34.881s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/plugins/sequence_capability_plugin_description.xml
+[34.881s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/plugins/planning_context_plugin_description.xml
+[34.881s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libpilz_industrial_motion_planner.so
+[34.882s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libpilz_industrial_motion_planner.so" to ""
+[34.882s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libjoint_limits_common.so
+[34.882s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libjoint_limits_common.so" to ""
+[34.882s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_base.so
+[34.882s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_base.so" to ""
+[34.882s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_ptp.so
+[34.882s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_ptp.so" to ""
+[34.882s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_lin.so
+[34.883s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_lin.so" to ""
+[34.883s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_circ.so
+[34.883s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libplanning_context_loader_circ.so" to ""
+[34.883s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libcommand_list_manager.so
+[34.883s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libcommand_list_manager.so" to ""
+[34.883s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libsequence_capability.so
+[34.884s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libsequence_capability.so" to ""
+[34.884s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libtrajectory_generation_common.so
+[34.884s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/libtrajectory_generation_common.so" to ""
+[34.884s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include
+[34.884s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/cartesian_limits_aggregator.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_blend_response.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/path_circle_generator.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/limits_container.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_blend_request.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/joint_limits_interface_extension.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_loader_lin.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/move_group_sequence_service.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/joint_limits_container.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_base.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/move_group_sequence_action.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_generator.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/tip_frame_getter.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_generator_circ.h
+[34.885s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_generator_lin.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/velocity_profile_atrap.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/cartesian_trajectory.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/cartesian_limit.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_generation_exceptions.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_functions.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_circ.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_loader_circ.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/plan_components_builder.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_lin.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/cartesian_trajectory_point.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/joint_limits_validator.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/command_list_manager.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/joint_limits_aggregator.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_ptp.h
+[34.886s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_loader_ptp.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_context_loader.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/joint_limits_extension.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/pilz_industrial_motion_planner.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/planning_exceptions.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_blender.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_blender_transition_window.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/trajectory_generator_ptp.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/pilz_industrial_motion_planner/capability_names.h
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/joint_limits_copy
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/joint_limits_copy/joint_limits_rosparam.hpp
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/include/joint_limits_copy/joint_limits.hpp
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/environment/library_path.sh
+[34.887s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/environment/library_path.dsv
+[34.888s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_pilz_industrial_motion_planner_direct
+[34.889s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_pilz_industrial_motion_planner_direct" to ""
+[34.889s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_velocity_profile_atrap
+[34.890s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_velocity_profile_atrap" to ""
+[34.890s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator
+[34.890s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator" to ""
+[34.890s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_functions
+[34.891s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_functions" to ""
+[34.891s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_blender_transition_window
+[34.892s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_blender_transition_window" to ""
+[34.892s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_common
+[34.893s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_common" to ""
+[34.893s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_circ
+[34.894s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_circ" to ""
+[34.894s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_lin
+[34.895s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_lin" to ""
+[34.895s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_ptp
+[34.896s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_trajectory_generator_ptp" to ""
+[34.896s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_pilz_industrial_motion_planner
+[34.897s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_pilz_industrial_motion_planner" to ""
+[34.897s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limit
+[34.898s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limit" to ""
+[34.898s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limits_aggregator
+[34.898s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limits_aggregator" to ""
+[34.898s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limits_container
+[34.899s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limits_container" to ""
+[34.899s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limits_validator
+[34.900s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_joint_limits_validator" to ""
+[34.900s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_cartesian_limits_aggregator
+[34.900s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_cartesian_limits_aggregator" to ""
+[34.900s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_planning_context_loaders
+[34.901s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_planning_context_loaders" to ""
+[34.901s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_planning_context
+[34.902s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_planning_context" to ""
+[34.902s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_get_solver_tip_frame
+[34.903s] -- Set runtime path of "/home/luis-a/panda_ws/install/pilz_industrial_motion_planner/lib/pilz_industrial_motion_planner/unittest_get_solver_tip_frame" to ""
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_trajectory_generator_ptp.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_joint_limits_aggregator.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_trajectory_blender_transition_window.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_trajectory_generator_lin.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_trajectory_generator_common.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_cartesian_limits_aggregator.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_joint_limit_config.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_trajectory_generator_circ.yaml
+[34.903s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/config/unittest_trajectory_functions.yaml
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_cartesian_limits_aggregator.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_trajectory_generator_common.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_trajectory_generator_ptp.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_joint_limits_aggregator.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_joint_limit.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_planning_context_loaders.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/common_parameters.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_trajectory_blender_transition_window.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_planning_context.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_trajectory_generator_circ.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_trajectory_generator_lin.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_pilz_industrial_motion_planner.test.py
+[34.904s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/launch/unittest_trajectory_functions.test.py
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/concept_testdata.png
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/prbt
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/prbt/testdata_with_gripper.xml
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/prbt/testdata_sequence.xml
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/prbt/testdata_deprecated.xml
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/concept_testdata.odp
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/frankaemika_panda
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/frankaemika_panda/testdata_sequence.xml
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/test_data/testpoints.py
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/ament_index/resource_index/package_run_dependencies/pilz_industrial_motion_planner
+[34.905s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/ament_index/resource_index/parent_prefix_path/pilz_industrial_motion_planner
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/environment/ament_prefix_path.sh
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/environment/ament_prefix_path.dsv
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/environment/path.sh
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/environment/path.dsv
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/local_setup.bash
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/local_setup.sh
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/local_setup.zsh
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/local_setup.dsv
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/package.dsv
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/ament_index/resource_index/packages/pilz_industrial_motion_planner
+[34.906s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/ament_index/resource_index/moveit_core__pluginlib__plugin/pilz_industrial_motion_planner
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/ament_index/resource_index/moveit_ros_move_group__pluginlib__plugin/pilz_industrial_motion_planner
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/ament_index/resource_index/pilz_industrial_motion_planner__pluginlib__plugin/pilz_industrial_motion_planner
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/pilz_industrial_motion_plannerTargetsExport.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/pilz_industrial_motion_plannerTargetsExport-release.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/ament_cmake_export_targets-extras.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/pilz_industrial_motion_plannerConfig.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/cmake/pilz_industrial_motion_plannerConfig-version.cmake
+[34.907s] -- Installing: /home/luis-a/panda_ws/install/pilz_industrial_motion_planner/share/pilz_industrial_motion_planner/package.xml
+[34.909s] Invoked command in '/home/luis-a/panda_ws/build/pilz_industrial_motion_planner' returned '0': AMENT_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/moveit_configs_utils:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/home/luis-a/panda_ws/install/launch_param_builder:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/luis-a/panda_ws/install/moveit_resources_prbt_pg70_support:/home/luis-a/panda_ws/install/moveit_ros_planning_interface:/home/luis-a/panda_ws/install/moveit_resources_prbt_moveit_config:/home/luis-a/panda_ws/install/moveit_ros_move_group:/home/luis-a/panda_ws/install/moveit_ros_warehouse:/home/luis-a/panda_ws/install/moveit_planners_ompl:/home/luis-a/panda_ws/install/moveit_kinematics:/home/luis-a/panda_ws/install/moveit_ros_planning:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils:/home/luis-a/panda_ws/install/moveit_simple_controller_manager:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin:/home/luis-a/panda_ws/install/moveit_core:/home/luis-a/panda_ws/install/moveit_resources_panda_moveit_config:/home/luis-a/panda_ws/install/moveit_resources_fanuc_moveit_config:/home/luis-a/panda_ws/install/srdfdom:/home/luis-a/panda_ws/install/moveit_resources_prbt_support:/home/luis-a/panda_ws/install/moveit_resources_pr2_description:/home/luis-a/panda_ws/install/moveit_resources_panda_description:/home/luis-a/panda_ws/install/moveit_resources_fanuc_description:/home/luis-a/panda_ws/install/moveit_common:/opt/ros/humble LD_LIBRARY_PATH=/home/luis-a/panda_ws/install/moveit_ros_planning_interface/lib:/home/luis-a/panda_ws/install/moveit_ros_move_group/lib:/home/luis-a/panda_ws/install/moveit_ros_warehouse/lib:/home/luis-a/panda_ws/install/moveit_planners_ompl/lib:/home/luis-a/panda_ws/install/moveit_kinematics/lib:/home/luis-a/panda_ws/install/moveit_ros_planning/lib:/home/luis-a/panda_ws/install/pilz_industrial_motion_planner_testutils/lib:/home/luis-a/panda_ws/install/moveit_simple_controller_manager/lib:/home/luis-a/panda_ws/install/moveit_ros_occupancy_map_monitor/lib:/home/luis-a/panda_ws/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/luis-a/panda_ws/install/moveit_core/lib:/home/luis-a/panda_ws/install/srdfdom/lib:${LD_LIBRARY_PATH} PATH=/home/luis-a/panda_ws/install/moveit_core/bin:${PATH} PYTHONPATH=/home/luis-a/panda_ws/install/moveit_configs_utils/lib/python3.10/site-packages:/home/luis-a/panda_ws/install/srdfdom/local/lib/python3.10/dist-packages:/home/luis-a/panda_ws/install/launch_param_builder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/luis-a/panda_ws/build/pilz_industrial_motion_planner
