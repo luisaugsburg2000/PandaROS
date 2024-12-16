@@ -1,14 +1,15 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
+#include <geometry_msgs/msg/pose.hpp>
+#include <trajectory_msgs/msg/joint_trajectory.hpp>
+#include <moveit/move_group_interface/move_group_interface.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2/LinearMath/Quaternion.h>
 #include <cmath>
 #include <memory>
 #include <thread>
 
-#include <moveit/move_group_interface/move_group_interface.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
-#include <tf2/LinearMath/Quaternion.h>
-
-// Publish joint commands from the planned trajectory
+// Function to publish joint commands from the planned trajectory
 void publishPlannedPath(
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
   const trajectory_msgs::msg::JointTrajectory &trajectory,
@@ -17,12 +18,11 @@ void publishPlannedPath(
 {
   RCLCPP_INFO(logger, "Publishing joint commands from planned trajectory...");
 
-  // Get the start time
   auto start_time = node->now();
 
   for (const auto &point : trajectory.points)
   {
-    // Calculate the time to wait until the next point
+    // Sleep until the next point
     auto now = node->now();
     auto target_time = start_time + rclcpp::Duration::from_seconds(
                                        point.time_from_start.sec +
@@ -46,72 +46,73 @@ void publishPlannedPath(
 
     sawyer_pub->publish(joint_message);
 
-    RCLCPP_INFO(logger, "Published joint positions: [%s]",
-                std::accumulate(point.positions.begin(), point.positions.end(), std::string(),
-                                [](const std::string &a, double b)
-                                { return a + (a.empty() ? "" : ", ") + std::to_string(b); })
-                    .c_str());
+    RCLCPP_INFO(logger, "Published joint positions.");
   }
-
   RCLCPP_INFO(logger, "Finished publishing planned trajectory.");
+}
+
+void spherePoseCallback(
+  const geometry_msgs::msg::Pose::SharedPtr msg,
+  moveit::planning_interface::MoveGroupInterface &move_group_interface,
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  rclcpp::Node::SharedPtr node,
+  const rclcpp::Logger &logger)
+{
+  RCLCPP_INFO(logger, "Received sphere pose. Starting planning...");
+  RCLCPP_INFO(logger, "Received sphere pose: x=%f, y=%f, z=%f", msg->position.x, msg->position.y, msg->position.z);
+
+  // Set the received pose as the goal
+  move_group_interface.setPoseTarget(*msg);
+
+  // Plan the motion
+  moveit::planning_interface::MoveGroupInterface::Plan plan;
+
+  if (move_group_interface.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS)
+  {
+    RCLCPP_INFO(logger, "Planning successful. Executing the plan...");
+
+    // Publish the planned path in a separate thread
+    std::thread publisher_thread(
+      publishPlannedPath,
+      sawyer_pub,
+      plan.trajectory_.joint_trajectory,
+      node,
+      logger);
+
+    publisher_thread.detach();
+  }
+  else
+  {
+    RCLCPP_ERROR(logger, "Planning failed!");
+  }
 }
 
 int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
 
-  auto node = rclcpp::Node::make_shared("sawyer_robot");
+  // Create node
+  auto node = rclcpp::Node::make_shared("sawyer_robot_controller");
+  auto logger = rclcpp::get_logger("move_program");
 
-  // Initialize publisher
+  // Publisher for joint commands
   auto sawyer_pub = node->create_publisher<sensor_msgs::msg::JointState>("joint_command", 10);
 
-  // Control variables
-  const rclcpp::Logger logger = rclcpp::get_logger("move_program");
+  // Initialize MoveIt! interface
+  moveit::planning_interface::MoveGroupInterface move_group_interface(node, "panda_arm");
 
-  // Execute MoveIt! planning
-  moveit::planning_interface::MoveGroupInterface MoveGroupInterface(node, "panda_arm");
-
-  // Define target pose
-  tf2::Quaternion tf2_quat;
-  tf2_quat.setRPY(0, 0, -3.14 / 2);
-  geometry_msgs::msg::Quaternion msg_quat = tf2::toMsg(tf2_quat);
-
-  geometry_msgs::msg::Pose GoalPose;
-  GoalPose.orientation = msg_quat;
-  GoalPose.position.x = 0.3;
-  GoalPose.position.y = -0.3;
-  GoalPose.position.z = 0.4;
-
-  MoveGroupInterface.setPoseTarget(GoalPose);
-
-  moveit::planning_interface::MoveGroupInterface::Plan plan1;
-  auto const outcome = static_cast<bool>(MoveGroupInterface.plan(plan1));
-
-  if (outcome)
-  {
-    RCLCPP_INFO(logger, "Planning successful.");
-
-    // Run trajectory publisher in a separate thread
-    std::thread publisher_thread(
-      publishPlannedPath,
-      sawyer_pub,
-      plan1.trajectory_.joint_trajectory,
-      node,
-      logger);
-
-    // Spin node for other callbacks
-    rclcpp::spin(node);
-
-    // Wait for publisher thread to finish
-    if (publisher_thread.joinable())
+  // Subscriber for sphere poses
+  auto sphere_sub = node->create_subscription<geometry_msgs::msg::Pose>(
+    "sphere_pose", 10,
+    [&move_group_interface, &sawyer_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
     {
-      publisher_thread.join();
-    }
-  }
-  else
-  {
-    RCLCPP_ERROR(logger, "Planning failed!");
-  }
+      spherePoseCallback(msg, move_group_interface, sawyer_pub, node, logger);
+    });
+
+  RCLCPP_INFO(logger, "Waiting for sphere pose messages on topic '/sphere_pose'...");
+
+  // Spin node
+  rclcpp::spin(node);
 
   rclcpp::shutdown();
   return 0;
