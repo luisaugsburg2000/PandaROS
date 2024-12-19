@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target move_program[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/move_program.dir/src/move_program.cpp.o[0m
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:[m[K In function ‘[01m[Kvoid spherePoseCallback(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr, moveit::planning_interface::MoveGroupInterface&, rclcpp::Publisher<sensor_msgs::msg::JointState_<std::allocator<void> > >::SharedPtr, rclcpp::Node::SharedPtr, const rclcpp::Logger&)[m[K’:
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:57:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksawyer_pub[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   57 | [01;35m[K::msg::JointState>::SharedPtr sawyer_pub[m[K,
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:58:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   58 |   [01;35m[Krclcpp::Node::SharedPtr node[m[K,
+      |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[100%] [32m[1mLinking CXX executable move_program[0m
+[100%] Built target move_program
+-- Install configuration: "Debug"
+-- Installing: /home/luis-a/panda_ws/install/move_program/lib/move_program/move_program
+-- Set runtime path of "/home/luis-a/panda_ws/install/move_program/lib/move_program/move_program" to ""
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/ament_index/resource_index/package_run_dependencies/move_program
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/ament_index/resource_index/parent_prefix_path/move_program
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/environment/ament_prefix_path.sh
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/environment/path.sh
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/environment/path.dsv
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/local_setup.bash
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/local_setup.sh
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/local_setup.zsh
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/local_setup.dsv
+-- Installing: /home/luis-a/panda_ws/install/move_program/share/move_program/package.dsv
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/ament_index/resource_index/packages/move_program
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/cmake/move_programConfig.cmake
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/cmake/move_programConfig-version.cmake
+-- Up-to-date: /home/luis-a/panda_ws/install/move_program/share/move_program/package.xml

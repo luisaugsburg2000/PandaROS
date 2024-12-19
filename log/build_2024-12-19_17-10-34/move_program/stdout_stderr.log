@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target move_program[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/move_program.dir/src/move_program.cpp.o[0m
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:[m[K In function ‘[01m[Kvoid spherePoseCallback(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr, moveit::planning_interface::MoveGroupInterface&, rclcpp::Publisher<sensor_msgs::msg::JointState_<std::allocator<void> > >::SharedPtr, rclcpp::Node::SharedPtr, const rclcpp::Logger&)[m[K’:
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:137:29:[m[K [01;31m[Kerror: [m[K‘[01m[Ko[m[K’ was not declared in this scope
+  137 |   tf2::Vector3 local_offset([01;31m[Ko[m[K.0, 0.0, 0.0);  // Offset in x, y, z (local frame)
+      |                             [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/move_program.dir/build.make:76: CMakeFiles/move_program.dir/src/move_program.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/move_program.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,8 @@
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:[m[K In function ‘[01m[Kvoid spherePoseCallback(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr, moveit::planning_interface::MoveGroupInterface&, rclcpp::Publisher<sensor_msgs::msg::JointState_<std::allocator<void> > >::SharedPtr, rclcpp::Node::SharedPtr, const rclcpp::Logger&)[m[K’:
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:57:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksawyer_pub[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   57 | [01;35m[K::msg::JointState>::SharedPtr sawyer_pub[m[K,
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+
+[01m[K/home/luis-a/panda_ws/src/move_program/src/move_program.cpp:58:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   58 |   [01;35m[Krclcpp::Node::SharedPtr node[m[K,
+      |   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
