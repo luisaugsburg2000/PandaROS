@@ -8,9 +8,10 @@
 #include <cmath>
 #include <memory>
 #include <thread>
-
 #include <iostream>
 #include <future>
+#include <action_msgs/msg/goal_status.hpp>
+#include <random>
 
 // Function to publish joint commands from the planned trajectory
 void publishPlannedPath(
@@ -60,9 +61,12 @@ void spherePoseCallback(
   const geometry_msgs::msg::Pose::SharedPtr msg,
   moveit::planning_interface::MoveGroupInterface &move_group_interface,
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  rclcpp::Publisher<action_msgs::msg::GoalStatus>::SharedPtr status_pub,
   rclcpp::Node::SharedPtr node,
   const rclcpp::Logger &logger)
 {
+  action_msgs::msg::GoalStatus status_msg;
+
   RCLCPP_INFO(logger, "Received sphere pose. Starting planning...");
   RCLCPP_INFO(logger, "Received sphere pose: x=%f, y=%f, z=%f", msg->position.x, msg->position.y, msg->position.z);
 
@@ -114,6 +118,14 @@ void spherePoseCallback(
   double fraction = move_group_interface.computeCartesianPath(
     waypoints, eef_step, jump_threshold, trajectory);
 
+  // Generate a unique goal ID for status messages
+  std::random_device rd;
+  std::uniform_int_distribution<int> dist(0, 255);
+  for (auto &byte : status_msg.goal_info.goal_id.uuid)
+  {
+    byte = static_cast<uint8_t>(dist(rd));
+  }
+
   if (fraction > 0.95) // If most of the path is valid
   {
     RCLCPP_INFO(logger, "Successfully computed Cartesian path (%.2f%% of path valid)", fraction * 100.0);
@@ -133,17 +145,20 @@ void spherePoseCallback(
     publisher_thread.detach();
     RCLCPP_INFO(logger, "Executing the Cartesian path...");
 
-    future.wait();
+    future.wait(); // Wait for execution to complete
+
     RCLCPP_INFO(logger, "Finished executing the Cartesian path.");
+    status_msg.status = action_msgs::msg::GoalStatus::STATUS_SUCCEEDED;
   }
   else
   {
     RCLCPP_ERROR(logger, "Failed to compute a valid Cartesian path (%.2f%% of path valid)", fraction * 100.0);
+    status_msg.status = action_msgs::msg::GoalStatus::STATUS_ABORTED;
   }
+
+  // Publish the execution status
+  status_pub->publish(status_msg);
 }
-
-
-
 
 int main(int argc, char **argv)
 {
@@ -156,15 +171,18 @@ int main(int argc, char **argv)
   // Publisher for joint commands
   auto sawyer_pub = node->create_publisher<sensor_msgs::msg::JointState>("joint_command", 10);
 
+  // Publisher for execution status
+  auto status_pub = node->create_publisher<action_msgs::msg::GoalStatus>("execution_status", 10);
+
   // Initialize MoveIt! interface
   moveit::planning_interface::MoveGroupInterface move_group_interface(node, "panda_arm");
 
   // Subscriber for sphere poses
   auto sphere_sub = node->create_subscription<geometry_msgs::msg::Pose>(
     "sphere_pose", 10,
-    [&move_group_interface, &sawyer_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
+    [&move_group_interface, &sawyer_pub, &status_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
     {
-      spherePoseCallback(msg, move_group_interface, sawyer_pub, node, logger);
+      spherePoseCallback(msg, move_group_interface, sawyer_pub, status_pub, node, logger);
     });
 
   RCLCPP_INFO(logger, "Waiting for sphere pose messages on topic '/sphere_pose'...");

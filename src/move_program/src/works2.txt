@@ -1,0 +1,206 @@
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/joint_state.hpp>
+#include <geometry_msgs/msg/pose.hpp>
+#include <trajectory_msgs/msg/joint_trajectory.hpp>
+#include <moveit/move_group_interface/move_group_interface.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2/LinearMath/Quaternion.h>
+#include <cmath>
+#include <memory>
+#include <thread>
+
+#include <iostream>
+#include <future>
+
+// Function to publish joint commands from the planned trajectory
+void publishPlannedPath(
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  const trajectory_msgs::msg::JointTrajectory &trajectory,
+  rclcpp::Node::SharedPtr node,
+  const rclcpp::Logger &logger,
+  std::promise<void> exitSignal)
+{
+  RCLCPP_INFO(logger, "Publishing joint commands from planned trajectory...");
+
+  auto start_time = node->now();
+
+  for (const auto &point : trajectory.points)
+  {
+    // Sleep until the next point
+    auto now = node->now();
+    auto target_time = start_time + rclcpp::Duration::from_seconds(
+                                       point.time_from_start.sec +
+                                       point.time_from_start.nanosec * 1e-9);
+    auto sleep_time = (target_time - now).to_chrono<std::chrono::nanoseconds>();
+
+    if (sleep_time.count() > 0)
+    {
+      std::this_thread::sleep_for(sleep_time);
+    }
+
+    // Publish joint positions
+    sensor_msgs::msg::JointState joint_message;
+    joint_message.name = trajectory.joint_names;
+    joint_message.position = point.positions;
+
+    if (!point.velocities.empty())
+    {
+      joint_message.velocity = point.velocities;
+    }
+
+    sawyer_pub->publish(joint_message);
+
+    RCLCPP_INFO(logger, "Published joint positions.");
+  }
+  RCLCPP_INFO(logger, "Finished publishing planned trajectory.");
+  exitSignal.set_value();
+}
+
+void spherePoseCallback(
+  const geometry_msgs::msg::Pose::SharedPtr msg,
+  moveit::planning_interface::MoveGroupInterface &move_group_interface,
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  rclcpp::Node::SharedPtr node,
+  const rclcpp::Logger &logger)
+{
+  RCLCPP_INFO(logger, "Received sphere pose. Starting planning...");
+  RCLCPP_INFO(logger, "Received sphere pose: x=%f, y=%f, z=%f", msg->position.x, msg->position.y, msg->position.z);
+
+  // Define the original target pose
+  geometry_msgs::msg::Pose target_pose = *msg;
+
+  // PHASE 1: Compute Stopover Pose
+  tf2::Vector3 stopover_offset(-0.175, 0.0, 0.1);  // Offset in front of the port
+  tf2::Vector3 adjtarget_offset(-0.1, 0.0, 0.1);
+  tf2::Quaternion orientation;
+  tf2::fromMsg(target_pose.orientation, orientation);
+
+  // Rotate the local offset into the global frame
+  tf2::Vector3 global_stopover_offset = tf2::quatRotate(orientation, stopover_offset);
+  tf2::Vector3 global_adjtarget_offset = tf2::quatRotate(orientation, adjtarget_offset);
+  geometry_msgs::msg::Pose stopover_pose = target_pose;
+  geometry_msgs::msg::Pose adjtarget_pose = target_pose;
+
+  // Apply the global offset to the position for the stopover pose
+  stopover_pose.position.x += global_stopover_offset.x();
+  stopover_pose.position.y += global_stopover_offset.y();
+  stopover_pose.position.z += global_stopover_offset.z();
+  adjtarget_pose.position.x += global_adjtarget_offset.x();
+  adjtarget_pose.position.y += global_adjtarget_offset.y();
+  adjtarget_pose.position.z += global_adjtarget_offset.z();
+
+  RCLCPP_INFO(logger, "Stopover pose: x=%f, y=%f, z=%f",
+              stopover_pose.position.x, stopover_pose.position.y, stopover_pose.position.z);
+  RCLCPP_INFO(logger, "AdjTarget pose: x=%f, y=%f, z=%f",
+              adjtarget_pose.position.x, adjtarget_pose.position.y, adjtarget_pose.position.z);
+
+  // Add rotation offset to stopover pose
+  tf2::Quaternion offset_quaternion;
+  offset_quaternion.setRPY(M_PI, 0.0, -(M_PI / 4));  // Roll, Pitch, Yaw offsets
+  tf2::Quaternion new_orientation = orientation * offset_quaternion;
+  new_orientation.normalize();
+  stopover_pose.orientation = tf2::toMsg(new_orientation);
+  adjtarget_pose.orientation = tf2::toMsg(new_orientation);
+
+
+
+  // PHASE 2: Plan Waypoints with Interpolation
+  std::vector<geometry_msgs::msg::Pose> waypoints;
+
+  // Add the stopover pose as the first waypoint
+  waypoints.push_back(stopover_pose);
+
+  // Interpolate intermediate waypoints to synchronize position and orientation changes
+  const int num_interpolated_points = 10; // Adjust this for finer granularity
+  for (int i = 1; i <= num_interpolated_points; ++i)
+  {
+    geometry_msgs::msg::Pose intermediate_pose;
+    
+    double t = static_cast<double>(i) / num_interpolated_points;
+    
+    // Interpolate position
+    intermediate_pose.position.x = stopover_pose.position.x + t * (adjtarget_pose.position.x - stopover_pose.position.x);
+    intermediate_pose.position.y = stopover_pose.position.y + t * (adjtarget_pose.position.y - stopover_pose.position.y);
+    intermediate_pose.position.z = stopover_pose.position.z + t * (adjtarget_pose.position.z - stopover_pose.position.z);
+
+    // Interpolate orientation (spherical linear interpolation - slerp)
+    tf2::Quaternion start_orientation, end_orientation, interpolated_orientation;
+    tf2::fromMsg(stopover_pose.orientation, start_orientation);
+    tf2::fromMsg(adjtarget_pose.orientation, end_orientation);
+    interpolated_orientation = start_orientation.slerp(end_orientation, t);
+    intermediate_pose.orientation = tf2::toMsg(interpolated_orientation);
+
+    waypoints.push_back(intermediate_pose);
+  }
+
+  // Add the final target pose as the last waypoint
+  waypoints.push_back(adjtarget_pose);
+
+  // Plan the Cartesian path
+  moveit_msgs::msg::RobotTrajectory trajectory;
+  const double jump_threshold = 0.0;   // Disable jump threshold
+  const double eef_step = 0.01;        // EEF step size for interpolation
+  double fraction = move_group_interface.computeCartesianPath(
+    waypoints, eef_step, jump_threshold, trajectory);
+
+  if (fraction > 0.95) // If most of the path is valid
+  {
+    RCLCPP_INFO(logger, "Successfully computed Cartesian path (%.2f%% of path valid)", fraction * 100.0);
+
+    std::promise<void> exitSignal;
+    std::future<void> future = exitSignal.get_future();
+
+    // Publish the planned path in a separate thread
+    std::thread publisher_thread(
+      publishPlannedPath,
+      sawyer_pub,
+      trajectory.joint_trajectory,
+      node,
+      logger,
+      std::move(exitSignal));
+
+    publisher_thread.detach();
+    RCLCPP_INFO(logger, "Executing the Cartesian path...");
+
+    future.wait();
+    RCLCPP_INFO(logger, "Finished executing the Cartesian path.");
+  }
+  else
+  {
+    RCLCPP_ERROR(logger, "Failed to compute a valid Cartesian path (%.2f%% of path valid)", fraction * 100.0);
+  }
+}
+
+
+
+
+int main(int argc, char **argv)
+{
+  rclcpp::init(argc, argv);
+
+  // Create node
+  auto node = rclcpp::Node::make_shared("sawyer_robot_controller");
+  auto logger = rclcpp::get_logger("move_program");
+
+  // Publisher for joint commands
+  auto sawyer_pub = node->create_publisher<sensor_msgs::msg::JointState>("joint_command", 10);
+
+  // Initialize MoveIt! interface
+  moveit::planning_interface::MoveGroupInterface move_group_interface(node, "panda_arm");
+
+  // Subscriber for sphere poses
+  auto sphere_sub = node->create_subscription<geometry_msgs::msg::Pose>(
+    "sphere_pose", 10,
+    [&move_group_interface, &sawyer_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
+    {
+      spherePoseCallback(msg, move_group_interface, sawyer_pub, node, logger);
+    });
+
+  RCLCPP_INFO(logger, "Waiting for sphere pose messages on topic '/sphere_pose'...");
+
+  // Spin node
+  rclcpp::spin(node);
+
+  rclcpp::shutdown();
+  return 0;
+}
