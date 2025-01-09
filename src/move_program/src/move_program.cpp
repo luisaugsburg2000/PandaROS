@@ -5,6 +5,7 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2/LinearMath/Quaternion.h>
+#include <std_msgs/msg/empty.hpp>
 #include <cmath>
 #include <memory>
 #include <thread>
@@ -55,6 +56,42 @@ void publishPlannedPath(
   }
   RCLCPP_INFO(logger, "Finished publishing planned trajectory.");
   exitSignal.set_value();
+}
+
+// Function to reset the robot to its origin position
+void resetRobot(
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  moveit::planning_interface::MoveGroupInterface &move_group_interface,
+  const rclcpp::Logger &logger)
+{
+  RCLCPP_INFO(logger, "Reset command received. Snapping robot to origin position...");
+
+  // Define the origin joint positions (adjust these for your robot)
+  std::vector<double> origin_positions = {0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785}; // Replace with actual origin positions
+  auto joint_names = move_group_interface.getJointNames();
+
+  // Publish the joint state to snap the robot to the origin position
+  sensor_msgs::msg::JointState joint_message;
+  joint_message.name = joint_names;
+  joint_message.position = origin_positions;
+
+  sawyer_pub->publish(joint_message);
+
+  // Synchronize MoveIt!'s internal state with the robot's new position
+  move_group_interface.setJointValueTarget(origin_positions);
+  move_group_interface.setStartStateToCurrentState();
+
+  RCLCPP_INFO(logger, "Robot snapped to origin position.");
+}
+
+// Callback for the "robot_reset" topic
+void robotResetCallback(
+  const std_msgs::msg::Empty::SharedPtr /*msg*/,
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  moveit::planning_interface::MoveGroupInterface &move_group_interface,
+  const rclcpp::Logger &logger)
+{
+  resetRobot(sawyer_pub, move_group_interface, logger);
 }
 
 void spherePoseCallback(
@@ -185,7 +222,16 @@ int main(int argc, char **argv)
       spherePoseCallback(msg, move_group_interface, sawyer_pub, status_pub, node, logger);
     });
 
+  // Subscriber for robot reset
+  auto reset_sub = node->create_subscription<std_msgs::msg::Empty>(
+    "robot_reset", 10,
+    [&sawyer_pub, &move_group_interface, logger](const std_msgs::msg::Empty::SharedPtr msg)
+    {
+      robotResetCallback(msg, sawyer_pub, move_group_interface, logger);
+    });
+
   RCLCPP_INFO(logger, "Waiting for sphere pose messages on topic '/sphere_pose'...");
+  RCLCPP_INFO(logger, "Waiting for reset commands on topic '/robot_reset'...");
 
   // Spin node
   rclcpp::spin(node);
