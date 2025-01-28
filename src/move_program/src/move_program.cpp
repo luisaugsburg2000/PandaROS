@@ -94,7 +94,7 @@ void robotResetCallback(
   resetRobot(sawyer_pub, move_group_interface, logger);
 }
 
-void spherePoseCallback(
+void stepCallback(
   const geometry_msgs::msg::Pose::SharedPtr msg,
   moveit::planning_interface::MoveGroupInterface &move_group_interface,
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
@@ -215,23 +215,23 @@ int main(int argc, char **argv)
   moveit::planning_interface::MoveGroupInterface move_group_interface(node, "panda_arm");
 
   // Subscriber for sphere poses
-  auto sphere_sub = node->create_subscription<geometry_msgs::msg::Pose>(
-    "sphere_pose", 10,
+  auto step_sub = node->create_subscription<geometry_msgs::msg::Pose>(
+    "/step", 10,
     [&move_group_interface, &sawyer_pub, &status_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
     {
-      spherePoseCallback(msg, move_group_interface, sawyer_pub, status_pub, node, logger);
+      stepCallback(msg, move_group_interface, sawyer_pub, status_pub, node, logger);
     });
 
   // Subscriber for robot reset
   auto reset_sub = node->create_subscription<std_msgs::msg::Empty>(
-    "robot_reset", 10,
+    "/reset", 10,
     [&sawyer_pub, &move_group_interface, logger](const std_msgs::msg::Empty::SharedPtr msg)
     {
       robotResetCallback(msg, sawyer_pub, move_group_interface, logger);
     });
 
-  RCLCPP_INFO(logger, "Waiting for sphere pose messages on topic '/sphere_pose'...");
-  RCLCPP_INFO(logger, "Waiting for reset commands on topic '/robot_reset'...");
+  RCLCPP_INFO(logger, "Waiting for step message on topic '/step'...");
+  RCLCPP_INFO(logger, "Waiting for reset commands on topic '/reset'...");
 
   // Spin node
   rclcpp::spin(node);
