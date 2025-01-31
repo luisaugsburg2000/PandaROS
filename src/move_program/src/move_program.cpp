@@ -6,6 +6,7 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2/LinearMath/Quaternion.h>
 #include <std_msgs/msg/empty.hpp>
+#include <std_msgs/msg/bool.hpp>
 #include <cmath>
 #include <memory>
 #include <thread>
@@ -13,6 +14,9 @@
 #include <future>
 #include <action_msgs/msg/goal_status.hpp>
 #include <random>
+
+// Global or static variable to hold the human render mode
+static bool human_render_mode = true;
 
 // Function to publish joint commands from the planned trajectory
 void publishPlannedPath(
@@ -119,13 +123,15 @@ void stepCallback(
   // Rotate the local offset into the global frame
   tf2::Vector3 global_stopover_offset = tf2::quatRotate(orientation, stopover_offset);
   tf2::Vector3 global_adjtarget_offset = tf2::quatRotate(orientation, adjtarget_offset);
+
   geometry_msgs::msg::Pose stopover_pose = target_pose;
   geometry_msgs::msg::Pose adjtarget_pose = target_pose;
 
-  // Apply the global offset to the position for the stopover pose
+  // Apply the global offset to the position
   stopover_pose.position.x += global_stopover_offset.x();
   stopover_pose.position.y += global_stopover_offset.y();
   stopover_pose.position.z += global_stopover_offset.z();
+
   adjtarget_pose.position.x += global_adjtarget_offset.x();
   adjtarget_pose.position.y += global_adjtarget_offset.y();
   adjtarget_pose.position.z += global_adjtarget_offset.z();
@@ -146,7 +152,7 @@ void stepCallback(
   // PHASE 2: Plan Waypoints (Stopover + Target)
   std::vector<geometry_msgs::msg::Pose> waypoints;
   waypoints.push_back(stopover_pose);  // Stopover as the first waypoint
-  waypoints.push_back(adjtarget_pose);   // Final target as the second waypoint
+  waypoints.push_back(adjtarget_pose); // Final target as the second waypoint
 
   // Plan the Cartesian path
   moveit_msgs::msg::RobotTrajectory trajectory;
@@ -162,6 +168,50 @@ void stepCallback(
   {
     byte = static_cast<uint8_t>(dist(rd));
   }
+
+  // ---------------------------------------------------
+  // Check the rendering mode (human_render_mode)
+  // ---------------------------------------------------
+  if (!human_render_mode)
+  {
+    // If human_render_mode == false,
+    // 1) Do NOT publish the entire trajectory in a thread.
+    // 2) Immediately publish only the final pose.
+    // 3) Publish status_msg with a value of 4.
+    RCLCPP_INFO(logger, "Human render mode disabled: skipping full trajectory publication.");
+
+    if (trajectory.joint_trajectory.points.empty())
+    {
+      // No valid trajectory was computed
+      RCLCPP_ERROR(logger, "No valid trajectory found. Publishing status=ABORTED.");
+      status_msg.status = action_msgs::msg::GoalStatus::STATUS_ABORTED;
+      status_pub->publish(status_msg);
+      return;
+    }
+
+    // Get the final point in the computed Cartesian path
+    const auto &final_point = trajectory.joint_trajectory.points.back();
+
+    // Publish that final point immediately
+    sensor_msgs::msg::JointState joint_message;
+    joint_message.name = trajectory.joint_trajectory.joint_names;
+    joint_message.position = final_point.positions;
+    if (!final_point.velocities.empty())
+    {
+      joint_message.velocity = final_point.velocities;
+    }
+
+    sawyer_pub->publish(joint_message);
+    RCLCPP_INFO(logger, "Published final robot pose from Cartesian path immediately.");
+
+    // Now publish the status (set to 4, as requested)
+    status_msg.status = 4; // Or any custom code you'd like to indicate "skipped path"
+    status_pub->publish(status_msg);
+    return; // Done
+  }
+  // ---------------------------------------------------
+  // If human_render_mode == true, do normal behavior
+  // ---------------------------------------------------
 
   if (fraction > 0.95) // If most of the path is valid
   {
@@ -230,8 +280,22 @@ int main(int argc, char **argv)
       robotResetCallback(msg, sawyer_pub, move_group_interface, logger);
     });
 
+  // Subscriber for human_render_mode
+  // This will update the global/static "human_render_mode" boolean.
+  auto human_render_sub = node->create_subscription<std_msgs::msg::Bool>(
+    "/human_render_mode", 10,
+    [](const std_msgs::msg::Bool::SharedPtr msg)
+    {
+      human_render_mode = msg->data;
+      RCLCPP_INFO(rclcpp::get_logger("move_program"), 
+                  "Received /human_render_mode update: %s",
+                  human_render_mode ? "true" : "false");
+    }
+  );
+
   RCLCPP_INFO(logger, "Waiting for step message on topic '/step'...");
   RCLCPP_INFO(logger, "Waiting for reset commands on topic '/reset'...");
+  RCLCPP_INFO(logger, "Waiting for boolean on topic '/human_render_mode' (default = true)...");
 
   // Spin node
   rclcpp::spin(node);

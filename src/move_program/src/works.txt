@@ -5,12 +5,14 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2/LinearMath/Quaternion.h>
+#include <std_msgs/msg/empty.hpp>
 #include <cmath>
 #include <memory>
 #include <thread>
-
 #include <iostream>
 #include <future>
+#include <action_msgs/msg/goal_status.hpp>
+#include <random>
 
 // Function to publish joint commands from the planned trajectory
 void publishPlannedPath(
@@ -56,13 +58,52 @@ void publishPlannedPath(
   exitSignal.set_value();
 }
 
-void spherePoseCallback(
+// Function to reset the robot to its origin position
+void resetRobot(
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  moveit::planning_interface::MoveGroupInterface &move_group_interface,
+  const rclcpp::Logger &logger)
+{
+  RCLCPP_INFO(logger, "Reset command received. Snapping robot to origin position...");
+
+  // Define the origin joint positions (adjust these for your robot)
+  std::vector<double> origin_positions = {0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785}; // Replace with actual origin positions
+  auto joint_names = move_group_interface.getJointNames();
+
+  // Publish the joint state to snap the robot to the origin position
+  sensor_msgs::msg::JointState joint_message;
+  joint_message.name = joint_names;
+  joint_message.position = origin_positions;
+
+  sawyer_pub->publish(joint_message);
+
+  // Synchronize MoveIt!'s internal state with the robot's new position
+  move_group_interface.setJointValueTarget(origin_positions);
+  move_group_interface.setStartStateToCurrentState();
+
+  RCLCPP_INFO(logger, "Robot snapped to origin position.");
+}
+
+// Callback for the "robot_reset" topic
+void robotResetCallback(
+  const std_msgs::msg::Empty::SharedPtr /*msg*/,
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  moveit::planning_interface::MoveGroupInterface &move_group_interface,
+  const rclcpp::Logger &logger)
+{
+  resetRobot(sawyer_pub, move_group_interface, logger);
+}
+
+void stepCallback(
   const geometry_msgs::msg::Pose::SharedPtr msg,
   moveit::planning_interface::MoveGroupInterface &move_group_interface,
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr sawyer_pub,
+  rclcpp::Publisher<action_msgs::msg::GoalStatus>::SharedPtr status_pub,
   rclcpp::Node::SharedPtr node,
   const rclcpp::Logger &logger)
 {
+  action_msgs::msg::GoalStatus status_msg;
+
   RCLCPP_INFO(logger, "Received sphere pose. Starting planning...");
   RCLCPP_INFO(logger, "Received sphere pose: x=%f, y=%f, z=%f", msg->position.x, msg->position.y, msg->position.z);
 
@@ -114,6 +155,14 @@ void spherePoseCallback(
   double fraction = move_group_interface.computeCartesianPath(
     waypoints, eef_step, jump_threshold, trajectory);
 
+  // Generate a unique goal ID for status messages
+  std::random_device rd;
+  std::uniform_int_distribution<int> dist(0, 255);
+  for (auto &byte : status_msg.goal_info.goal_id.uuid)
+  {
+    byte = static_cast<uint8_t>(dist(rd));
+  }
+
   if (fraction > 0.95) // If most of the path is valid
   {
     RCLCPP_INFO(logger, "Successfully computed Cartesian path (%.2f%% of path valid)", fraction * 100.0);
@@ -133,17 +182,20 @@ void spherePoseCallback(
     publisher_thread.detach();
     RCLCPP_INFO(logger, "Executing the Cartesian path...");
 
-    future.wait();
+    future.wait(); // Wait for execution to complete
+
     RCLCPP_INFO(logger, "Finished executing the Cartesian path.");
+    status_msg.status = action_msgs::msg::GoalStatus::STATUS_SUCCEEDED;
   }
   else
   {
     RCLCPP_ERROR(logger, "Failed to compute a valid Cartesian path (%.2f%% of path valid)", fraction * 100.0);
+    status_msg.status = action_msgs::msg::GoalStatus::STATUS_ABORTED;
   }
+
+  // Publish the execution status
+  status_pub->publish(status_msg);
 }
-
-
-
 
 int main(int argc, char **argv)
 {
@@ -156,18 +208,30 @@ int main(int argc, char **argv)
   // Publisher for joint commands
   auto sawyer_pub = node->create_publisher<sensor_msgs::msg::JointState>("joint_command", 10);
 
+  // Publisher for execution status
+  auto status_pub = node->create_publisher<action_msgs::msg::GoalStatus>("execution_status", 10);
+
   // Initialize MoveIt! interface
   moveit::planning_interface::MoveGroupInterface move_group_interface(node, "panda_arm");
 
   // Subscriber for sphere poses
-  auto sphere_sub = node->create_subscription<geometry_msgs::msg::Pose>(
-    "sphere_pose", 10,
-    [&move_group_interface, &sawyer_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
+  auto step_sub = node->create_subscription<geometry_msgs::msg::Pose>(
+    "/step", 10,
+    [&move_group_interface, &sawyer_pub, &status_pub, node, logger](const geometry_msgs::msg::Pose::SharedPtr msg)
     {
-      spherePoseCallback(msg, move_group_interface, sawyer_pub, node, logger);
+      stepCallback(msg, move_group_interface, sawyer_pub, status_pub, node, logger);
     });
 
-  RCLCPP_INFO(logger, "Waiting for sphere pose messages on topic '/sphere_pose'...");
+  // Subscriber for robot reset
+  auto reset_sub = node->create_subscription<std_msgs::msg::Empty>(
+    "/reset", 10,
+    [&sawyer_pub, &move_group_interface, logger](const std_msgs::msg::Empty::SharedPtr msg)
+    {
+      robotResetCallback(msg, sawyer_pub, move_group_interface, logger);
+    });
+
+  RCLCPP_INFO(logger, "Waiting for step message on topic '/step'...");
+  RCLCPP_INFO(logger, "Waiting for reset commands on topic '/reset'...");
 
   // Spin node
   rclcpp::spin(node);
